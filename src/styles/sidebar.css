@@ -1,0 +1,93 @@
+.sidebar {
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.22s cubic-bezier(0.4,0,0.2,1);
+  background: #fff;
+  border-right: 1px solid #c8e6c9;
+  display: flex;
+  flex-direction: column;
+  width: 228px;
+}
+
+.sidebar--collapsed {
+  width: 58px;
+}
+
+.sidebar__scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 12px 6px;
+}
+
+.sidebar__group  { margin-bottom: 4px; }
+.sidebar__divider { height: 1px; background: #c8e6c9; margin: 6px 8px; }
+
+/* Expanded button */
+.sidebar__nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  margin-bottom: 1px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  background: transparent;
+  color: #5c7a62;
+  white-space: nowrap;
+}
+.sidebar__nav-btn:hover { background: rgba(45,106,53,0.08); }
+.sidebar__nav-btn--active { background: linear-gradient(100deg, #1a3a1a, #2d6a35); color: #fff; }
+.sidebar__nav-btn--active:hover { opacity: 0.95; }
+
+/* Collapsed button — icon only, centered */
+.sidebar__nav-btn--collapsed {
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 10px;
+  width: 46px;
+  margin: 0 auto 1px;
+}
+
+.sidebar__nav-label           { font-size: 12.5px; white-space: nowrap; }
+.sidebar__nav-label--active   { font-weight: 600; }
+.sidebar__nav-label--inactive { font-weight: 400; }
+.sidebar__chevron { margin-left: auto; opacity: 0.6; }
+
+/* Footer */
+.sidebar__footer {
+  padding: 12px 14px;
+  border-top: 1px solid #c8e6c9;
+}
+.sidebar__footer--collapsed {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.sidebar__footer-ay    { font-size: 10px; color: #9ab89f; text-align: center; line-height: 1.6; }
+.sidebar__footer-motto { font-size: 9px; color: #c0d4c5; text-align: center; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+.sidebar__footer-dot   { width: 6px; height: 6px; border-radius: 50%; background: #c8e6c9; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    box-shadow: 4px 0 24px rgba(13,42,13,0.12);
+    width: 228px !important;
+    transform: translateX(0);
+    transition: transform 0.22s cubic-bezier(0.4,0,0.2,1);
+  }
+  .sidebar--collapsed {
+    transform: translateX(-100%);
+    width: 228px !important;
+  }
+}

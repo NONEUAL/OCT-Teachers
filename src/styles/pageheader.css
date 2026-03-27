@@ -1,0 +1,9 @@
+.page-header { margin-bottom: 24px; }
+.page-header__row { display: flex; align-items: center; gap: 10px; }
+.page-header__icon-wrap {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(135deg, #1a3a1a, #2d6a35);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.page-header__title    { font-family: 'Syne', sans-serif; font-size: 21px; font-weight: 700; color: #1a3a1a; letter-spacing: -0.2px; }
+.page-header__subtitle { color: #3a5c3a; font-size: 12.5px; margin-top: 5px; margin-left: 46px; }

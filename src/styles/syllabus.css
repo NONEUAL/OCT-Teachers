@@ -1,0 +1,8 @@
+.syllabus__grid { display: flex; flex-direction: column; gap: 12px; }
+.syllabus__card { background: #fff; border-radius: 14px; padding: 18px 22px; box-shadow: 0 2px 12px rgba(13,42,13,0.06); display: flex; align-items: center; gap: 16px; }
+.syllabus__icon-wrap { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg,#1a3a1a,#2d6a35); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.syllabus__code     { font-size: 10px; font-weight: 700; color: #2d6a35; background: #e8f5e9; padding: 2px 8px; border-radius: 6px; letter-spacing: 0.3px; }
+.syllabus__subject  { font-size: 14px; font-weight: 600; color: #0d1f0d; margin-top: 3px; }
+.syllabus__meta     { font-size: 11px; color: #7aaa80; margin-top: 3px; }
+.syllabus__sections { display: flex; gap: 5px; margin-top: 6px; flex-wrap: wrap; }
+.syllabus__section-tag { font-size: 9.5px; background: #f0faf2; color: #2d6a35; padding: 2px 8px; border-radius: 6px; font-weight: 600; border: 1px solid #c8e6c9; }

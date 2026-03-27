@@ -1,0 +1,62 @@
+.navbar {
+  height: 62px;
+  flex-shrink: 0;
+  background: linear-gradient(105deg, #0a1f0a 0%, #1a3a1a 48%, #2d6a35 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 12px;
+  box-shadow: 0 2px 20px rgba(10,31,10,0.45);
+  position: relative;
+  z-index: 100;
+}
+.navbar__glow {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 80% 50%, rgba(200,168,37,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.navbar__hamburger {
+  background: none; border: none; color: #c8a825; cursor: pointer;
+  display: flex; align-items: center; padding: 5px; border-radius: 8px; z-index: 1;
+  transition: background 0.15s;
+}
+.navbar__hamburger:hover { background: rgba(200,168,37,0.12); }
+
+.navbar__logo { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; z-index: 1; flex-shrink: 0; }
+
+.navbar__brand { z-index: 1; }
+.navbar__brand-name { font-family: 'Syne', sans-serif; color: #fff; font-size: 15px; font-weight: 700; letter-spacing: -0.2px; line-height: 1.2; }
+.navbar__brand-sub  { color: rgba(200,168,37,0.68); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 500; }
+
+.navbar__spacer { flex: 1; }
+
+.navbar__search {
+  display: flex; align-items: center;
+  background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 10px; padding: 7px 13px; gap: 8px; z-index: 1;
+}
+.navbar__search input { border: none; background: none; outline: none; color: #fff; font-size: 12px; width: 130px; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.navbar__notif { position: relative; z-index: 1; }
+.navbar__notif-btn {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.15s;
+}
+.navbar__notif-btn:hover { background: rgba(255,255,255,0.15); }
+.navbar__notif-dot { position: absolute; top: 8px; right: 8px; width: 6px; height: 6px; border-radius: 50%; background: #c8a825; border: 1.5px solid #1a3a1a; }
+
+.navbar__profile {
+  display: flex; align-items: center; gap: 9px;
+  background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 5px 13px 5px 5px; cursor: pointer; z-index: 1; transition: background 0.15s;
+}
+.navbar__profile:hover { background: rgba(255,255,255,0.14); }
+.navbar__avatar {
+  width: 30px; height: 30px; border-radius: 9px;
+  background: linear-gradient(135deg, #c8a825, #e8c040);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; color: #0a1f0a;
+}
+.navbar__profile-name { color: #fff; font-size: 12px; font-weight: 600; line-height: 1.25; }
+.navbar__profile-id   { color: rgba(200,168,37,0.62); font-size: 9.5px; letter-spacing: 0.3px; }

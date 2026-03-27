@@ -1,0 +1,18 @@
+.schedule__table-wrap { overflow-x: auto; }
+.schedule__table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.schedule__table thead tr { background: linear-gradient(100deg, #0a1f0a, #2d6a35); }
+.schedule__table thead th { padding: 13px 14px; text-align: left; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; white-space: nowrap; }
+.schedule__table thead th:nth-child(3),
+.schedule__table thead th:nth-child(4) { text-align: center; }
+.schedule__table tbody tr:nth-child(odd)  { background: #fff; }
+.schedule__table tbody tr:nth-child(even) { background: #f4fbf5; }
+.schedule__table tbody tr:hover { background: #e8f5e9; }
+.schedule__table tbody td { padding: 13px 14px; border-bottom: 1px solid #c8e6c9; font-size: 12.5px; color: #0d1f0d; }
+.schedule__td-code    { font-weight: 700; color: #1a3a1a !important; white-space: nowrap; }
+.schedule__td-subject { font-weight: 500; }
+.schedule__td-center  { text-align: center; }
+.schedule__td-time    { font-weight: 600; white-space: nowrap; color: #2d6a35 !important; }
+.schedule__day-badge  { display: inline-block; font-size: 10px; font-weight: 700; color: #2d6a35; background: #e8f5e9; padding: 3px 9px; border-radius: 7px; letter-spacing: 0.5px; }
+.schedule__section-badge { font-size: 10px; font-weight: 600; color: #1a3a1a; background: #e8f5e9; padding: 3px 9px; border-radius: 7px; }
+.schedule__footer { padding: 12px 16px; border-top: 1px solid #c8e6c9; font-size: 12px; color: #3a5c3a; text-align: right; }
+.schedule__footer strong { color: #1a3a1a; }
