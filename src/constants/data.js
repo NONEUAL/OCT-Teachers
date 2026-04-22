@@ -43,7 +43,6 @@ export const NAV_ITEMS = [
   {
     section: "Records",
     items: [
-      { id: "attendance",  label: "Attendance Logs",  icon: "CalendarCheck" },
       { id: "syllabus",    label: "Course Syllabus",  icon: "FileText" },
       { id: "archived",    label: "Archived Classes", icon: "Archive" },
     ],
@@ -139,24 +138,6 @@ export const STUDENTS = {
   ],
 };
 
-export const ATTENDANCE = [
-  { date: "2026-02-02", day: "Mon", timeIn: "7:45 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-03", day: "Tue", timeIn: "7:50 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-04", day: "Wed", timeIn: "8:15 AM",  timeOut: "5:00 PM", status: "Late",    remarks: "Traffic" },
-  { date: "2026-02-05", day: "Thu", timeIn: "7:48 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-06", day: "Fri", timeIn: "7:55 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-09", day: "Mon", timeIn: "—",        timeOut: "—",       status: "Absent",  remarks: "Sick leave" },
-  { date: "2026-02-10", day: "Tue", timeIn: "7:46 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-11", day: "Wed", timeIn: "7:52 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-12", day: "Thu", timeIn: "7:44 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-13", day: "Fri", timeIn: "7:58 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-16", day: "Mon", timeIn: "7:51 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-17", day: "Tue", timeIn: "7:47 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-18", day: "Wed", timeIn: "8:05 AM",  timeOut: "5:00 PM", status: "Late",    remarks: "" },
-  { date: "2026-02-19", day: "Thu", timeIn: "7:43 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-  { date: "2026-02-20", day: "Fri", timeIn: "7:56 AM",  timeOut: "5:00 PM", status: "Present", remarks: "" },
-];
-
 export const SYLLABUS = [
   { code: "IT 104", subject: "Quantitative Method", semester: "2nd Sem AY 2025-2026", sections: ["BSIT 212-A", "BSIT 212-B", "BSIT 213-A"], file: "IT104_Syllabus_2025-2026.pdf", uploaded: "Jan 10, 2026" },
   { code: "IT 210", subject: "Web Programming",     semester: "2nd Sem AY 2025-2026", sections: ["BSIT 311-A", "BSIT 311-B"],               file: "IT210_Syllabus_2025-2026.pdf", uploaded: "Jan 10, 2026" },
@@ -177,8 +158,20 @@ export const FORMS = [
   { title: "Class Record",         description: "Printable class attendance record",    file: "class_record.xlsx",   icon: "BookOpen" },
 ];
 
-export const ANNOUNCEMENTS = [
-  { title: "Enrollment for 2nd Semester Now Open",       date: "Feb 18", tag: "Enrollment" },
-  { title: "Foundation Day", date: "Mar 7", tag: "Events" },
-  { title: "Corporate Attire Measurement",  date: "Feb 26", tag: "Announcement" },
+// type: "exam" | "holiday" | "event"
+export const CALENDAR_EVENTS = [
+  { date: new Date(2026, 3,  7), label: "Foundation Day",          type: "holiday" },
+  { date: new Date(2026, 3,  9), label: "Araw ng Kagitingan",      type: "holiday" },
+  { date: new Date(2026, 3, 14), label: "Finals Week Begins",      type: "exam"    },
+  { date: new Date(2026, 3, 15), label: "Grade Submission Starts", type: "event"   },
+  { date: new Date(2026, 3, 17), label: "Good Friday",             type: "holiday" },
+  { date: new Date(2026, 3, 18), label: "Black Saturday",          type: "holiday" },
+  { date: new Date(2026, 3, 20), label: "Easter Monday",           type: "holiday" },
+  { date: new Date(2026, 3, 24), label: "Finals Week Ends",        type: "exam"    },
+  { date: new Date(2026, 3, 25), label: "Grade Submission Deadline", type: "event" },
+  { date: new Date(2026, 3, 28), label: "Enrollment Opens",        type: "event"   },
+  { date: new Date(2026, 2, 15), label: "Midterm Grade Deadline",  type: "event"   },
+  { date: new Date(2026, 2, 23), label: "Midterm Exams Begin",     type: "exam"    },
+  { date: new Date(2026, 2, 27), label: "Midterm Exams End",       type: "exam"    },
+  { date: new Date(2026, 4,  1), label: "Labor Day",               type: "holiday" },
 ];

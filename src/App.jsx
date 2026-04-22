@@ -9,7 +9,6 @@ import MyClassesView           from "./views/MyClassesView.jsx";
 import ScheduleView            from "./views/ScheduleView.jsx";
 import GradeEncodingView       from "./views/GradeEncodingView.jsx";
 import ClassListView           from "./views/ClassListView.jsx";
-import AttendanceView          from "./views/AttendanceView.jsx";
 import SyllabusView            from "./views/SyllabusView.jsx";
 import ArchivedView            from "./views/ArchivedView.jsx";
 import DownloadableFormsView   from "./views/DownloadableFormsView.jsx";
@@ -23,7 +22,6 @@ function renderView(active, onNavigate) {
     case "schedule":      return <ScheduleView />;
     case "gradeencoding": return <GradeEncodingView />;
     case "classlist":     return <ClassListView />;
-    case "attendance":    return <AttendanceView />;
     case "syllabus":      return <SyllabusView />;
     case "archived":      return <ArchivedView />;
     case "forms":         return <DownloadableFormsView />;

@@ -4,7 +4,7 @@
   padding: 14px 16px; box-shadow: 0 2px 10px rgba(13,42,13,0.06);
   border-top: 3px solid #2d6a35; text-align: center;
 }
-.myclasses__summary-value { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: #1a3a1a; }
+.myclasses__summary-value { font-family: 'Urbanist', sans-serif; font-size: 22px; font-weight: 700; color: #1a3a1a; }
 .myclasses__summary-label { font-size: 11px; color: #3a5c3a; margin-top: 3px; font-weight: 500; }
 .myclasses__students-count { font-size: 10.5px; color: #7aaa80; }
 .myclasses__section-badge {

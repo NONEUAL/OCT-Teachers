@@ -7,7 +7,7 @@
 .dashboard__banner-orb-2 { position: absolute; right: 60px; bottom: -50px; width: 120px; height: 120px; border-radius: 50%; background: rgba(200,168,37,0.05); pointer-events: none; }
 .dashboard__banner-content { position: relative; z-index: 1; }
 .dashboard__banner-eyebrow { color: rgba(200,168,37,0.78); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 7px; font-weight: 600; }
-.dashboard__banner-title   { font-family: 'Syne', sans-serif; color: #fff; font-size: 23px; font-weight: 700; letter-spacing: -0.2px; }
+.dashboard__banner-title   { font-family: 'Urbanist', sans-serif; color: #fff; font-size: 23px; font-weight: 700; letter-spacing: -0.2px; }
 .dashboard__banner-sub     { color: rgba(255,255,255,0.52); font-size: 12.5px; margin-top: 6px; max-width: 420px; line-height: 1.55; }
 .dashboard__banner-actions { display: flex; gap: 10px; margin-top: 16px; }
 
@@ -20,14 +20,14 @@
 }
 .stat-card:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(13,42,13,0.1); }
 .stat-card__icon-wrap { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-.stat-card__value  { font-family: 'Syne', sans-serif; font-size: 25px; font-weight: 700; color: #0d1f0d; letter-spacing: -0.3px; }
+.stat-card__value  { font-family: 'Urbanist', sans-serif; font-size: 25px; font-weight: 700; color: #0d1f0d; letter-spacing: -0.3px; }
 .stat-card__label  { font-size: 12px; font-weight: 600; color: #1a3a1a; margin-top: 3px; }
 .stat-card__sub    { font-size: 10.5px; color: #7aaa80; margin-top: 2px; }
 
-.dashboard__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.dashboard__grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 16px; margin-bottom: 16px; }
 
 .section-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-.section-card-title  { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #1a3a1a; }
+.section-card-title  { font-family: 'Urbanist', sans-serif; font-size: 14px; font-weight: 700; color: #1a3a1a; }
 
 .sched-preview__item { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
 .sched-preview__item + .sched-preview__item { border-top: 1px solid #c8e6c9; }
@@ -36,9 +36,82 @@
 .sched-preview__meta    { font-size: 10.5px; color: #7aaa80; margin-top: 1px; }
 .sched-preview__time    { font-size: 10.5px; font-weight: 600; color: #3a5c3a; background: #f0faf2; padding: 3px 8px; border-radius: 7px; white-space: nowrap; }
 
-.announce__item + .announce__item { border-top: 1px solid #c8e6c9; }
-.announce__item    { padding: 9px 0; }
-.announce__row     { display: flex; align-items: flex-start; gap: 8px; }
-.announce__tag     { font-size: 9.5px; background: #e8f5e9; color: #1a3a1a; padding: 2px 8px; border-radius: 7px; font-weight: 700; white-space: nowrap; margin-top: 2px; }
-.announce__title   { font-size: 12px; font-weight: 500; color: #0d1f0d; line-height: 1.45; }
-.announce__date    { font-size: 10px; color: #7aaa80; margin-top: 2px; }
+/* ── Calendar card (matches student portal) ── */
+.cal-card { padding: 14px 14px 12px; }
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cal-month-year { display: flex; align-items: baseline; gap: 5px; }
+.cal-month {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 13px; font-weight: 700; color: #1a3a1a;
+}
+.cal-year { font-size: 11px; color: #7aaa80; font-weight: 500; }
+.cal-nav { display: flex; gap: 3px; }
+.cal-nav-btn {
+  width: 22px; height: 22px; border-radius: 6px;
+  border: 1.5px solid #c8e6c9; background: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #3a5c3a; transition: background 0.15s, border-color 0.15s;
+}
+.cal-nav-btn:hover { background: #e8f5e9; border-color: #2d6a35; }
+
+.cal-dow { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 2px; }
+.cal-dow-cell {
+  text-align: center; font-size: 9px; font-weight: 700; color: #7aaa80;
+  letter-spacing: 0.3px; text-transform: uppercase; padding-bottom: 4px;
+}
+
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px; }
+.cal-day {
+  aspect-ratio: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; border-radius: 6px;
+}
+.cal-day-num { font-size: 10px; font-weight: 500; color: #1a3a1a; line-height: 1; }
+.cal-day--empty { opacity: 0; }
+.cal-day--today               { background: #1a3a1a; }
+.cal-day--today .cal-day-num  { color: #fff; font-weight: 700; }
+.cal-day--sunday .cal-day-num { color: #c62828; }
+.cal-day--sunday.cal-day--today .cal-day-num { color: #fff; }
+
+.cal-dot { width: 3px; height: 3px; border-radius: 50%; margin-top: 1px; flex-shrink: 0; }
+.cal-dot--exam    { background: #c62828; }
+.cal-dot--holiday { background: #c8a825; }
+.cal-dot--event   { background: #2d6a35; }
+
+.cal-legend {
+  display: flex; gap: 10px; margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid #e8f5e9; flex-wrap: wrap;
+}
+.cal-legend-item { display: flex; align-items: center; gap: 4px; font-size: 9.5px; color: #3a5c3a; font-weight: 500; }
+.cal-legend-dot  { width: 6px; height: 6px; border-radius: 50%; }
+
+.cal-upcoming-title {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: #7aaa80; margin: 10px 0 6px;
+}
+.cal-events { display: flex; flex-direction: column; gap: 4px; }
+.cal-event-row {
+  display: flex; align-items: center; gap: 7px;
+  padding: 5px 8px; border-radius: 7px; background: #f4fbf5;
+}
+.cal-event-date  { font-size: 10px; font-weight: 700; color: #1a3a1a; white-space: nowrap; min-width: 44px; }
+.cal-event-label { font-size: 10.5px; font-weight: 500; color: #0d1f0d; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cal-event-tag   { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; padding: 2px 6px; border-radius: 5px; flex-shrink: 0; }
+.cal-event-tag--exam    { background: #fdecea; color: #b71c1c; }
+.cal-event-tag--holiday { background: #fff3e0; color: #7a4a00; }
+.cal-event-tag--event   { background: #e8f5e9; color: #1a3a1a; }
+
+@media (max-width: 1100px) { .dashboard__grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .dashboard__banner { padding: 18px; }
+  .dashboard__banner-title { font-size: 18px; }
+  .dashboard__stats { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .dashboard__banner-actions { flex-direction: column; }
+}

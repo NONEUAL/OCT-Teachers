@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Urbanist:wght@600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -128,7 +128,6 @@ body {
   .profile__layout { grid-template-columns: 1fr; }
 
   .grade-encoding__toolbar { flex-direction: column; align-items: flex-start; }
-  .attendance__toolbar { flex-direction: column; align-items: flex-start; }
 
   .navbar__search { display: none; }
   .navbar__profile-id { display: none; }
@@ -136,7 +135,5 @@ body {
 
 @media (max-width: 480px) {
   .forms__grid { grid-template-columns: 1fr; }
-  .attendance__summary { flex-wrap: wrap; }
-  .attendance__summary-pill { min-width: 80px; }
   .dashboard__banner-actions { flex-direction: column; }
 }
